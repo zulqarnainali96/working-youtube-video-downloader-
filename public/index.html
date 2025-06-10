@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YTDownloader - Download YouTube Videos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo" id="home-link">
+            <i class="fab fa-youtube"></i>
+            <span>YTDownloader</span>
+          </a>
+          <div class="nav-links">
+            <a href="index.html" id="home-nav">Home</a>
+            <a href="./how-it-works/how-it-works.html" id="how-it-works-nav"
+              >How It Works</a
+            >
+            <a href="./features/features.html" id="features-nav">Features</a>
+            <a href="./faq/faq.html" id="faq-nav">FAQ</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="page-content" id="page-content">
+        <!-- Home Page Content (default) -->
+        <div id="home-page">
+          <section class="hero">
+            <h1>Download YouTube Videos in Seconds</h1>
+            <p>
+              Free, fast, and easy to use - Download videos in HD quality
+              without any watermarks
+            </p>
+
+            <div class="download-form">
+              <input
+                type="url"
+                class="url-input"
+                placeholder="Paste YouTube video URL here..."
+                id="video-url"
+              />
+              <button class="download-btn" id="fetch-btn">
+                <i class="fas fa-download"></i> Download
+              </button>
+            </div>
+            <div id="status" class="status"></div> <!-- Add this line -->
+            <div class="loader" id="loader"></div>
+          </section>
+
+          <section class="features">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Lightning Fast</h3>
+              <p>
+                Download videos at high speeds without any limitations or
+                waiting times.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-highlighter"></i>
+              </div>
+              <h3>High Quality</h3>
+              <p>
+                Get videos in up to 4K resolution with crystal clear audio
+                quality.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Safe & Secure</h3>
+              <p>No malware or viruses. Your privacy is our top priority.</p>
+            </div>
+          </section>
+
+          <section class="how-it-works">
+            <h2>How To Download YouTube Videos</h2>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <h3>Copy URL</h3>
+                <p>Copy the URL of the YouTube video you want to download</p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <h3>Paste Link</h3>
+                <p>Paste the URL into the input field above</p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <h3>Choose Format</h3>
+                <p>Select your preferred video quality and format</p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <h3>Download</h3>
+                <p>Click the download button and save your video</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="video-preview" id="preview-section">
+            <div class="preview-header">
+              <h2>Video Download Options</h2>
+              <button id="new-video-btn">
+                <i class="fas fa-sync"></i> New Video
+              </button>
+            </div>
+
+            <div class="preview-content">
+              <div class="thumbnail" id="video-thumbnail">
+                <i class="fas fa-play-circle" style="font-size: 60px"></i>
+              </div>
+
+              <div class="video-info">
+                <h3 id="video-title">
+                  How to Build a Modern Website - Complete Tutorial
+                </h3>
+                <div class="video-meta">
+                  <span
+                    ><i class="fas fa-user"></i>
+                    <span id="video-author">Web Dev Tutorials</span></span
+                  >
+                  <span
+                    ><i class="fas fa-clock"></i>
+                    <span id="video-duration">15:42</span></span
+                  >
+                  <span
+                    ><i class="fas fa-calendar"></i>
+                    <span id="video-date">Jun 15, 2023</span></span
+                  >
+                </div>
+                <p id="video-description">
+                  In this comprehensive tutorial, you'll learn how to build a
+                  responsive, modern website from scratch using HTML, CSS, and
+                  JavaScript.
+                </p>
+
+                <div class="download-options">
+                  <h3>Select Download Format:</h3>
+                  <div class="options-grid" id="format-options">
+                    <!-- <div class="option-btn active" data-format="mp4-1080">
+                      <h4>MP4 1080p</h4>
+                      <p>High Quality Video</p>
+                    </div>
+                    <div class="option-btn" data-format="mp4-720">
+                      <h4>MP4 720p</h4>
+                      <p>Medium Quality</p>
+                    </div>
+                    <div class="option-btn" data-format="mp4-480">
+                      <h4>MP4 480p</h4>
+                      <p>Standard Quality</p>
+                    </div>
+                    <div class="option-btn" data-format="mp3">
+                      <h4>MP3</h4>
+                      <p>Audio Only</p>
+                    </div> -->
+                  </div>
+
+                  <button
+                    class="download-btn"
+                    id="download-now-btn"
+                    style="margin-top: 25px; padding: 15px 25px"
+                  >
+                    <i class="fas fa-download"></i> Download Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>YTDownloader</h3>
+            <p>
+              The fastest and easiest way to download YouTube videos for free.
+              No registration required.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#" id="footer-home"
+                  ><i class="fas fa-home"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="#" id="footer-how"
+                  ><i class="fas fa-cogs"></i> How It Works</a
+                >
+              </li>
+              <li>
+                <a href="#" id="footer-features"
+                  ><i class="fas fa-star"></i> Features</a
+                >
+              </li>
+              <li>
+                <a href="#" id="footer-faq"
+                  ><i class="fas fa-question-circle"></i> FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-scale-balanced"></i> Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-lock"></i> Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-copyright"></i> Copyright Info</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-exclamation-triangle"></i> Disclaimer</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-envelope"></i> support@ytdownloader.com</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          &copy; 2023 YTDownloader. All rights reserved. This service is for
+          educational purposes only.
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
